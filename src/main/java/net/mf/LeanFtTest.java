@@ -25,9 +25,18 @@ public class LeanFtTest extends UnitTestClassBase {
     }
 
     private void printMethodName (Object o){
-        System.out.println("Method: "+ o.getClass().getEnclosingMethod().getName());
+        System.out.println("\r\nMethod: "+ o.getClass().getEnclosingMethod().getName());
     }
 
+    @DataProvider(name = "Authentications")
+    public static Object[][] credentials (){
+        return new Object[][] {
+                {"user1", "password1"},
+                {"user2", "password2"},
+                {"user3", "password3"},
+                {"user4", "password4"}
+        };
+    }
     @Test
     public void testDirectValue() throws GeneralLeanFtException {
         printMethodName(new Object(){});
@@ -41,4 +50,11 @@ public class LeanFtTest extends UnitTestClassBase {
         printMethodName(new Object(){});
         System.out.println(myMessage);
     }
+
+    @Test(dataProvider = "Authentications")
+    public void mytest (String userName, String userPwd){
+        printMethodName(new Object(){});
+        System.out.println("Name: "+ userName+ " Password: "+userPwd);
+    }
+
 }
