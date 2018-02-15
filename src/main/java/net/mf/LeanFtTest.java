@@ -37,8 +37,8 @@ public class LeanFtTest extends UnitTestClassBase {
 
     @Parameters("corndog")
     @Test
-    public void testPassedValue (String environment) throws GeneralLeanFtException{
+    public void testPassedValue (String myMessage) throws GeneralLeanFtException{
         printMethodName(new Object(){});
-        System.out.println(environment);
+        System.out.println(myMessage);
     }
 }
