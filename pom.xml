@@ -83,7 +83,7 @@
                 <version>2.12.4</version>
                 <configuration>
                     <systemPropertyVariables>
-                        <environment>${env.USER}</environment>
+                        <currentUser>${env.USER}</currentUser>
                         <corndog>GOOD</corndog>
                     </systemPropertyVariables>
                 </configuration>
