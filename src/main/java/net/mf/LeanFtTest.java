@@ -40,7 +40,8 @@ public class LeanFtTest extends UnitTestClassBase {
     @Test
     public void testDirectValue() throws GeneralLeanFtException {
         printMethodName(new Object(){});
-        System.out.println(System.getProperty("corndog"));
+        System.out.println("corndog is: "+System.getProperty("corndog"));
+        System.out.println("Current User: "+System.getProperty("currentUser"));
 
     }
 
